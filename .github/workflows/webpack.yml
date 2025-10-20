@@ -20,7 +20,7 @@ jobs:
           
       - run: npm run build
         env:
-          GITHUB_USER: "${{ github.actor }}"
+          GITHUB_USER: "cyber-limon"
       
       - uses: peaceiris/actions-gh-pages@v4
         with:
