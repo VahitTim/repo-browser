@@ -25,7 +25,8 @@ jobs:
           
       # Билдим сайт
       - run: npm run build
-
+        env:
+          GITHUB_USER: "${{ github.actor }}"
       # Публикуем на GitHub Pages
       - uses: peaceiris/actions-gh-pages@v4
         with:
