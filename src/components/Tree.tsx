@@ -33,7 +33,7 @@ export default function Tree({ node, level }: TreeProps) {
               <ChevronDown className="w-4 h-4" />
             </motion.div>
           )}
-          <span className="font-medium text-gray-200">{node.name}</span>
+          <span className="font-medium">{node.name}</span>
         </div>
       )}
 
@@ -47,14 +47,14 @@ export default function Tree({ node, level }: TreeProps) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="flex flex-col ml-4 pl-2 border-l border-white/20">
+            <div className="flex flex-col ml-4 pl-2 border-l">
               {node.repos.map((repo, i) => (
                 <a
                   key={repo.id}
                   href={repo.html_url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-0.5 hover:underline text-gray-300 text-sm transition-all hover:text-white"
+                  className="py-0.5 hover:underline text-sm transition-all hover:text-white"
                 >
                   {i + 1}. {repo.data.label}
                 </a>
