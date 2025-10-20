@@ -13,7 +13,7 @@ interface TreeProps {
 export default function Tree({ node, level }: TreeProps) {
   const hasChildren = node.children && Object.keys(node.children).length > 0;
   const hasRepos = node.repos.length > 0;
-  const [expanded, setExpanded] = useState(level < 5); // root открыт по умолчанию
+  const [expanded, setExpanded] = useState(level < 2); // root открыт по умолчанию
 
   return (
     <div className="relative flex flex-col">
@@ -49,11 +49,11 @@ export default function Tree({ node, level }: TreeProps) {
             className="overflow-hidden"
           >
             <div className="flex flex-col ml-4 pl-2 border-l">
-              {node.repos.map(repo => (<RepoField key={repo.id} repo={repo}/>))}
               {hasChildren &&
                 Object.values(node.children!).map((child, i) => (
                   <Tree key={i} node={child} level={level + 1} />
                 ))}
+              {node.repos.map(repo => (<RepoField key={repo.id} repo={repo}/>))}
             </div>
           </motion.div>
         )}

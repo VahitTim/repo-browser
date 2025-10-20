@@ -1,18 +1,465 @@
 [
   {
-    "name": "OOP___Lab_2"
+    "name": "Administration_of_information_systems___Lab",
+    "data": {
+        "label": "Администрирование информационных сетей",
+        "path": "/Администрирование информационных сетей"
+    }
   },
   {
-    "name": "OOP___Lab_3"
+    "name": "Artificial_intelligence_methods___Lab_1",
+    "data": {
+        "label": "Методы ИИ. Лаба 1",
+        "path": "/Методы искусственного интеллекта/лабы"
+    }
   },
   {
-    "name": "repo-browser"
+    "name": "Calculation_methods___Lab_1",
+    "data": {
+        "label": "МВ. Лаба 1",
+        "path": "/Методы вычисления/лабы"
+    }
+  },
+  {
+    "name": "Calculation_methods___Lab_2",
+    "data": {
+        "label": "МВ. Лаба 2",
+        "path": "/Методы вычисления/лабы"
+    }
+  },
+  {
+    "name": "Calculation_methods___Lab_3",
+    "data": {
+        "label": "МВ. Лаба 3",
+        "path": "/Методы вычисления/лабы"
+    }
+  },
+  {
+    "name": "Calculation_methods___Lab_4",
+    "data": {
+        "label": "МВ. Лаба 4",
+        "path": "/Методы вычисления/лабы"
+    }
+  },
+  {
+    "name": "Computer_system_architectures_and_computer_networks___Lab_1",
+    "data": {
+        "label": "АВСиСь. Лаба 1",
+        "path": "/Архитектуры вычислительных систем и компьютерные сети/лабы"
+    }
+
+  },
+  {
+    "name": "Databases___Course_project",
+    "data": {
+        "label": "БД. Курсовой проект",
+        "path": "/База Данных"
+    }
+  },
+  {
+    "name": "Databases___Practice",
+    "data": {
+        "label": "БД. практики",
+        "path": "/База Данных"
+    }
+  },
+  {
+    "name": "Decision_theory___Lab_1",
+    "data": {
+        "label": "ТПР. Лаба 1",
+        "path": "/Теория принятия решений/лабы"
+    }
+  },
+  {
+    "name": "Decision_theory___Lab_2",
+    "data": {
+        "label": "ТПР. Лаба 2",
+        "path": "/Теория принятия решений/лабы"
+    }
+  },
+  {
+    "name": "Decision_theory___Lab_3",
+    "data": {
+        "label": "ТПР. Лаба 3",
+        "path": "/Теория принятия решений/лабы"
+    }
+  },
+  {
+    "name": "ERP-systems_for_production_management___Lab_1",
+    "data": {
+        "label": "ERP. Лаба 1",
+        "path": "/ERP-системы управления производством/лабы"
+    }
+  },
+  {
+    "name": "ERP-systems_for_production_management___Lab_2",
+    "data": {
+        "label": "ERP. Лаба 2",
+        "path": "/ERP-системы управления производством/лабы"
+    }
+  },
+  {
+    "name": "ERP-systems_for_production_management___Lab_3",
+    "data": {
+        "label": "ERP. Лаба 3",
+        "path": "/ERP-системы управления производством/лабы"
+    }
+  },
+  {
+    "name": "ERP-systems_for_production_management___Lab_4-7",
+    "data": {
+        "label": "ERP. Лабы 4-7",
+        "path": "/ERP-системы управления производством/лабы"
+    }
+  },
+  {
+    "name": "Functional_programming___Lab_1",
+    "data": {
+        "label": "ФП. Лаба 1",
+        "path": "/ФЛП/Функциональное программирование/лабы"
+    }
+  },
+  {
+    "name": "Functional_programming___Lab_2",
+    "data": {
+        "label": "ФП. Лаба 2",
+        "path": "/ФЛП/Функциональное программирование/лабы"
+    }
+  },
+  {
+    "name": "Functional_programming___Lab_3",
+    "data": {
+        "label": "ФП. Лаба 3",
+        "path": "/ФЛП/Функциональное программирование/лабы"
+    }
+  },
+  {
+    "name": "Logic_programming___Lab_1",
+    "data": {
+        "label": "ЛП. Лаба 1",
+        "path": "/ФЛП/Логическое программирование/лабы"
+    }
+  },
+  {
+    "name": "Logic_programming___Lab_2",
+    "data": {
+        "label": "ЛП. Лаба 2",
+        "path": "/ФЛП/Логическое программирование/лабы"
+    }
+  },
+  {
+    "name": "Machine_learning_basics___Lab_1",
+    "data": {
+        "label": "ОМО. Лаба 1",
+        "path": "/Основы машинного обчения/лабы"
+    }
+  },
+  {
+    "name": "Machine_learning_basics___Lab_2",
+    "data": {
+        "label": "ОМО. Лаба 2",
+        "path": "/Основы машинного обчения/лабы"
+    }
+  },
+  {
+    "name": "Machine_learning_basics___Lab_3",
+    "data": {
+        "label": "ОМО. Лаба 3",
+        "path": "/Основы машинного обчения/лабы"
+    }
+  },
+  {
+    "name": "Mathematical_support___Industrial_practice_2",
+    "data": {
+        "label": "Производсвенная практика. 2",
+        "path": "/Математическое обеспечение"
+    }
+  },
+  {
+    "name": "Mathematical_support___Lectures",
+    "data": {
+        "label": "МО лекции",
+        "path": "/Математическое обеспечение"
+    }
+  },
+  {
+    "name": "Mathematical_support___Tests",
+    "data": {
+        "label": "МО тесты",
+        "path": "/Математическое обеспечение"
+    }
+  },
+  {
+    "name": "Mobile_application_programming___Lab_1",
+    "data": {
+        "label": "ПМП. Лаба 1",
+        "path": "/Программирование мобильных приложений/лабы"
+    }
+  },
+  {
+    "name": "Mobile_application_programming___Lab_2",
+    "data": {
+        "label": "ПМП. Лаба 2",
+        "path": "/Программирование мобильных приложений/лабы"
+    }
+  },
+  {
+    "name": "Mobile_application_programming___Lab_3",
+    "data": {
+        "label": "ПМП. Лаба 3",
+        "path": "/Программирование мобильных приложений/лабы"
+    }
+  },
+  {
+    "name": "Mobile_application_programming___Lab_4",
+    "data": {
+        "label": "ПМП. Лаба 4",
+        "path": "/Программирование мобильных приложений/лабы"
+    }
+  },
+  {
+    "name": "Modern_problems_of_information_technology___Lab_1",
+    "data": {
+        "label": "СПИТ. Лаба 1",
+        "path": "/Современные проблемы информационных технологий/лабы"
+    }
+  },
+  {
+    "name": "Modern_problems_of_information_technology___Lab_2",
+    "data": {
+        "label": "СПИТ. Лаба 2",
+        "path": "/Современные проблемы информационных технологий/лабы"
+    }
+  },
+  {
+    "name": "Modern_problems_of_information_technology___Lab_3",
+    "data": {
+        "label": "СПИТ. Лаба 3",
+        "path": "/Современные проблемы информационных технологий/лабы"
+    }
+  },
+  {
+    "name": "Neuroinformatics___Lab_1",
+    "data": {
+        "label": "НИ. Лаба 1",
+        "path": "/Нейроинформатика/лабы"
+    }
+  },
+  {
+    "name": "Neuroinformatics___Lab_2-3",
+    "data": {
+        "label": "НИ. Лаба 2-3",
+        "path": "/Нейроинформатика/лабы"
+    }
+  },
+  {
+    "name": "Neuroinformatics___Lab_4-5",
+    "data": {
+        "label": "НИ. Лаба 4-5",
+        "path": "/Нейроинформатика/лабы"
+    }
+  },
+  {
+    "name": "Neuroinformatics___Lab_6-7",
+    "data": {
+        "label": "НИ. Лаба 6-7",
+        "path": "/Нейроинформатика/лабы"
+    }
+  },
+  {
+    "name": "OOP___Lab_1",
+    "data": {
+        "label": "ООП. Лаба 1",
+        "path": "/Объектно-ориентированное программирование/лабы"
+    }
+  },
+  {
+    "name": "OOP___Lab_2",
+    "data": {
+        "label": "ООП. Лаба 2",
+        "path": "/Объектно-ориентированное программирование/лабы"
+    }
+  },
+  {
+    "name": "OOP___Lab_3",
+    "data": {
+        "label": "ООП. Лаба 3",
+        "path": "/Объектно-ориентированное программирование/лабы"
+    }
+  },
+  {
+    "name": "OOP___Lab_4.1",
+    "data": {
+        "label": "ООП. Лаба 4.1",
+        "path": "/Объектно-ориентированное программирование/лабы"
+    }
+  },
+  {
+    "name": "OOP___Lab_4.2",
+    "data": {
+        "label": "ООП. Лаба 4.2",
+        "path": "/Объектно-ориентированное программирование/лабы"
+    }
+  },
+  {
+    "name": "OOP___Lab_5",
+    "data": {
+        "label": "ООП. Лаба 5",
+        "path": "/Объектно-ориентированное программирование/лабы"
+    }
+  },
+  {
+    "name": "OOP___Lab_6",
+    "data": {
+        "label": "ООП. Лаба 6",
+        "path": "/Объектно-ориентированное программирование/лабы"
+    }
+  },
+  {
+    "name": "Operating_systems_and_shells___Lab_1",
+    "data": {
+        "label": "ОСиО. Лаба 1",
+        "path": "/Операционные системы и оболочки/лабы"
+    }
+  },
+  {
+    "name": "Operating_systems_and_shells___Lab_2",
+    "data": {
+        "label": "ОСиО. Лаба 2",
+        "path": "/Операционные системы и оболочки/лабы"
+    }
+  },
+  {
+    "name": "Operating_systems_and_shells___Lab_3",
+    "data": {
+        "label": "ОСиО. Лаба 3",
+        "path": "/Операционные системы и оболочки/лабы"
+    }
+  },
+  {
+    "name": "Operating_systems_and_shells___Lab_4-5",
+    "data": {
+        "label": "ОСиО. Лаба 4-5",
+        "path": "/Операционные системы и оболочки/лабы"
+    }
+  },
+  {
+    "name": "Operations_research___Lab_1-3",
+    "data": {
+        "label": "ИО. Лабы 1-3",
+        "path": "/Исследование операций"
+    }
+  },
+  {
+    "name": "Parallel_programming_technologies___Course_project",
+    "data": {
+        "label": "ТПП. Курсовой проект",
+        "path": "/Технологии параллельного программирования"
+    }
+  },
+  {
+    "name": "Parallel_programming_technologies___Lab_1",
+    "data": {
+        "label": "ТПП. Лаба 1",
+        "path": "/Технологии параллельного программирования/лабы"
+    }
+  },
+  {
+    "name": "Parallel_programming_technologies___Lab_2",
+    "data": {
+        "label": "ТПП. Лаба 2",
+        "path": "/Технологии параллельного программирования/лабы"
+    }
+  },
+  {
+    "name": "Parallel_programming_technologies___Lab_3",
+    "data": {
+        "label": "ТПП. Лаба 3",
+        "path": "/Технологии параллельного программирования/лабы"
+    }
+  },
+  {
+    "name": "Parallel_programming_technologies___Lab_4",
+    "data": {
+        "label": "ТПП. Лаба 4",
+        "path": "/Технологии параллельного программирования/лабы"
+    }
+  },
+  {
+    "name": "Parallel_programming_technologies___Lab_5-6",
+    "data": {
+        "label": "ТПП. Лаба 5-6",
+        "path": "/Технологии параллельного программирования/лабы"
+    }
+  },
+  {
+    "name": "Programming_basics___Course_project",
+    "data": {
+        "label": "ОП. Курсовой проект",
+        "path": "/Основы программирования"
+    }
+  },
+  {
+    "name": "Programming_basics___Lab",
+    "data": {
+        "label": "ОП. Лаба",
+        "path": "/Основы программирования/лабы"
+    }
+  },
+  {
+    "name": "Programming_languages___Course_project",
+    "data": {
+        "label": "ЯП. Курсовой проект",
+        "path": "/Языки прогромирования"
+    }
+  },
+  {
+    "name": "Programming_languages___Lab_1",
+    "data": {
+        "label": "ЯП. Лаба 1",
+        "path": "/Языки прогромирования/лабы"
+    }
+  },
+  {
+    "name": "Programming_languages___Lab_2",
+    "data": {
+        "label": "ЯП. Лаба 2",
+        "path": "/Языки прогромирования/лабы"
+    }
   },
   {
     "name": "Software_development_technology_and_quality_assessment___Lab_1",
     "data": {
-        "label": "Технология разработки и оценки качества. Лаба 1",
-        "path": "/Технология разработки и оценки качества/лабы"
+        "label": "ТРПОиОК. Лаба 1",
+        "path": "/Технология разработки программного обеспечения и оценка качества /лабы"
+    }
+  },
+  {
+    "name": "Structures_and_algorithms_of_computer_data_processing___Lab_1",
+    "data": {
+        "label": "СиАКОД. Лаба 1",
+        "path": "/Структуры и алгоритмы компьютерной обработки данных /лабы"
+    }
+  },
+  {
+    "name": "Structures_and_algorithms_of_computer_data_processing___Lab_2",
+    "data": {
+        "label": "СиАКОД. Лаба 2",
+        "path": "/Структуры и алгоритмы компьютерной обработки данных /лабы"
+    }
+  },
+  {
+    "name": "Structures_and_algorithms_of_computer_data_processing___Lab_3",
+    "data": {
+        "label": "СиАКОД. Лаба 3",
+        "path": "/Структуры и алгоритмы компьютерной обработки данных /лабы"
+    }
+  },
+  {
+    "name": "Theory_of_experimental_design___Lab_1",
+    "data": {
+        "label": "ТПЭ. лаба1",
+        "path": "/Теория проведения эксперимента/лабы"
     }
   }
 ]

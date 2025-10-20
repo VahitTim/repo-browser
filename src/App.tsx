@@ -14,7 +14,7 @@ export function Wrapper() {
 function App() {
   return (
     <ThemeProvider>
-    <main className='h-full'>
+    <main className='min-h-screen'>
     <BrowserRouter>
       <Routes>
         <Route path="/repo-browser/" element={<RepoBrowser login={info.owner.login}/>} />
