@@ -1,7 +1,11 @@
 import info from "../../public/info.json";
+import over from "../../public/over.json";
 import { useState } from "react";
 import { useFetchingEffect } from "../hooks/useFetchingEffect";
 import Tree from "./Tree";
+import { Button } from "./ui/button";
+import { Card } from "./ui/card";
+import {  RotateCcw } from "lucide-react";
 
 interface RepoData {
   label: string;
@@ -20,6 +24,7 @@ export interface TreeNode {
   children?: Record<string, TreeNode>;
   repos: RepoInfo[];
 }
+
 
 export default function RepoBrowser() {
     const [reposInfo, setReposInfo] = useState(info.repos)
@@ -41,8 +46,9 @@ export default function RepoBrowser() {
         reposInfo.map(async (i) => {
           const url = `https://raw.githubusercontent.com/${info.owner.login}/${i.name}/main/repoinfo/config.json`;
           const response = await fetch(url);
+          const o = over.find(o => o.name === i.name)
           if (!response.ok)
-            return { ...i, data: { label: i.name, path: "" } };
+            return { ...i, data: { label: i.name, path: "" , ...o?.data} };
           const result: RepoData = await response.json();
           return { ...i, data: result };
         })
@@ -71,17 +77,18 @@ export default function RepoBrowser() {
 
 
   return (
-    <div>
-      <div className="flex items-center gap-5 text-xl mb-4">
-        <img className="rounded-full w-16 h-16" src={image_url} />
-        <a href={profile_url} title="перейти в профиль">
-          <div className="hover:underline hover:cursor-pointer">{info.owner.login}</div>
-        </a>
-      </div>
+    <div className="flex flex-col space-y-4 p-2">
+        <Card className="md:size-fit p-3 flex flex-row items-center justify-between">
+            <img className="rounded-full w-14 h-14" src={image_url} />
+            <a href={profile_url} title="перейти в профиль">
+            <div className="text-xl md:text-lg hover:underline hover:cursor-pointer">{info.owner.login}</div>
+            </a>
 
+            <Button onClick={handleRefresh}><RotateCcw/></Button>
+        </Card>
 
-        <button onClick={handleRefresh}>Обновить</button>
-      <Tree node={tree} level={0}/>
+        <div>Дерево:</div>
+        <Tree node={tree} level={0}/>
     </div>
   );
 }

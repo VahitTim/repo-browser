@@ -7,6 +7,7 @@ if (!GITHUB_USER) {
 }
 
 const INFO_JSON_PATH = "./public/info.json";
+const OVER_JSON_PATH = "./public/over.json";
 
 async function main() {
     console.log(`Fetching repositories for ${GITHUB_USER}...`);
@@ -24,8 +25,8 @@ async function main() {
     const repos = await responseRepos.json();
     const owner = await responseUser.json();
 
-    const info = {owner, repos}
-    fs.writeFileSync(INFO_JSON_PATH, JSON.stringify(info));
+    fs.writeFileSync(INFO_JSON_PATH, JSON.stringify({owner, repos}, null, 2));
+    fs.writeFileSync(OVER_JSON_PATH, JSON.stringify(repos.map(repo => ({name: repo.name})), null, 2));
     console.log(`Saved repo info to ${INFO_JSON_PATH}`);
 }
 
