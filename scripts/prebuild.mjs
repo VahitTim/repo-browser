@@ -26,7 +26,7 @@ async function main() {
     const owner = await responseUser.json();
 
     fs.writeFileSync(INFO_JSON_PATH, JSON.stringify({owner, repos}, null, 2));
-    fs.writeFileSync(OVER_JSON_PATH, JSON.stringify(repos.map(repo => ({name: repo.name})), null, 2));
+    // fs.writeFileSync(OVER_JSON_PATH, JSON.stringify(repos.map(repo => ({name: repo.name})), null, 2));
     console.log(`Saved repo info to ${INFO_JSON_PATH}`);
 }
 
