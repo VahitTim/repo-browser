@@ -5,8 +5,8 @@ type FetchingFunction = () => Promise<void>;
 
 export const useFetchingEffect = (
   callback: FetchingFunction, list: any[]
-): [boolean, string] => {
+): [FetchingFunction, boolean, string] => {
   const [fetch, isLoading, error] = useFetching(callback)
   useEffect(() => {fetch()}, list)
-  return [isLoading, error]
+  return [fetch, isLoading, error]
 };

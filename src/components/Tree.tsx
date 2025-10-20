@@ -1,8 +1,9 @@
 import { ChevronDown } from "lucide-react";
-import type { TreeNode } from "./RepoBrowser";
-import { cn } from "@/lib/utils";
+import type { RepoInfo, TreeNode } from "./RepoBrowser";
+import { cn, formatTimeDifference, txtToColor } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { Card } from "./ui/card";
 
 interface TreeProps {
   node: TreeNode;
@@ -12,7 +13,7 @@ interface TreeProps {
 export default function Tree({ node, level }: TreeProps) {
   const hasChildren = node.children && Object.keys(node.children).length > 0;
   const hasRepos = node.repos.length > 0;
-  const [expanded, setExpanded] = useState(true); // root открыт по умолчанию
+  const [expanded, setExpanded] = useState(level < 5); // root открыт по умолчанию
 
   return (
     <div className="relative flex flex-col">
@@ -48,18 +49,7 @@ export default function Tree({ node, level }: TreeProps) {
             className="overflow-hidden"
           >
             <div className="flex flex-col ml-4 pl-2 border-l">
-              {node.repos.map((repo, i) => (
-                <a
-                  key={repo.id}
-                  href={repo.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-0.5 hover:underline text-sm transition-all hover:text-white"
-                >
-                  {i + 1}. {repo.data.label}
-                </a>
-              ))}
-
+              {node.repos.map(repo => (<RepoField key={repo.id} repo={repo}/>))}
               {hasChildren &&
                 Object.values(node.children!).map((child, i) => (
                   <Tree key={i} node={child} level={level + 1} />
@@ -70,4 +60,33 @@ export default function Tree({ node, level }: TreeProps) {
       </AnimatePresence>
     </div>
   );
+}
+
+
+
+const RepoField = ({repo} : {repo: RepoInfo}) => {
+    return (
+        <a
+            href={repo.html_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center size-fit gap-2 py-0.5 text-sm transition-all"
+        >
+            <label
+                className={cn("hover:underline p-1 rounded")}
+                style={{backgroundColor: repo.data.color}}
+            >{repo.data.label}</label>
+            {repo.language
+            &&
+            <Card className="p-1 rounded-lg" style={{backgroundColor: txtToColor(repo.language)}}>
+                {repo.language}
+            </Card>}
+            <Card className="p-1 rounded-lg">
+                {formatTimeDifference(Date.parse(repo.created_at))}
+            </Card>
+            <Card className="p-1 rounded-lg">
+                {formatTimeDifference(Date.parse(repo.updated_at))}
+            </Card>
+        </a>
+    );
 }
