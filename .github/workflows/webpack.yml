@@ -21,7 +21,7 @@ jobs:
       # Подгружаем данные репозиториев
       - run: npm run prebuild
         env:
-          GITHUB_USER: "%$GITHUB_ACTOR"
+          GITHUB_USER: "${{ github.actor }}"
           
       # Билдим сайт
       - run: npm run build
