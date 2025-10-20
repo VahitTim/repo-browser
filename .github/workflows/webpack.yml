@@ -1,0 +1,32 @@
+name: Deploy Repo Browser
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      # Подгружаем данные репозиториев
+      - run: npm run prebuild
+        env:
+          GITHUB_USER: "%$GITHUB_ACTOR"
+          
+      # Билдим сайт
+      - run: npm run build
+
+      # Публикуем на GitHub Pages
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_dir: ./dist
