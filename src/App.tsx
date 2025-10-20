@@ -1,11 +1,14 @@
 import './App.css'
 import RepoBrowser from './components/RepoBrowser'
+import { ThemeProvider } from './providers/ThemeProvider'
 
 function App() {
   return (
-    <>
-      <RepoBrowser/>
-    </>
+    <ThemeProvider>
+      <main className='h-screen'>
+        <RepoBrowser/>
+      </main>
+    </ThemeProvider>
   )
 }
 
