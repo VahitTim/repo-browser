@@ -46,7 +46,7 @@ export default function RepoBrowser() {
         reposInfo.map(async (i) => {
           const url = `https://raw.githubusercontent.com/${info.owner.login}/${i.name}/main/repoinfo/config.json`;
           const response = await fetch(url);
-          const o = over.find(o => o.name === i.name)
+          const o = over.find(o => o.name && o.name === i.name)
           if (!response.ok)
             return { ...i, data: { label: i.name, path: "" , ...o?.data} };
           const result: RepoData = await response.json();
