@@ -1,4 +1,3 @@
-import React from 'react';
 import type { TreeNode } from './RepoBrowser';
 import { cn } from '@/lib/utils';
 

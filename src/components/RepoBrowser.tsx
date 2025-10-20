@@ -1,6 +1,5 @@
 import info from "../../public/info.json";
-import { useState, useEffect } from "react";
-import { useFetching } from "../hooks/useFetching";
+import { useState } from "react";
 import { useFetchingEffect } from "../hooks/useFetchingEffect";
 import Tree from "./Tree";
 
